@@ -1,0 +1,133 @@
+/* ALL-ROUND */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100vw - 2rem;
+    height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.07em;
+}
+.bold {
+    font-weight: bold;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;  /* 16 * 1.5 = 24 */
+    font-weight: 900;
+    transform: scaleY(1.5);
+}
+h3 {
+    font-size: 1.125rem; /* 16 * 1.125 = 18 */
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+p {
+    font-size: 0.9575rem;  /* 16 * 0.9575 = 15 */
+    font-weight: 700;
+}
+em {
+    font-size: 0.75rem;  /* 16 * 0.75 = 12 */
+    font-weight: 400;
+}
+
+/* HEADER */
+header>h1, header>h3 {
+    position: fixed;
+    margin-top: 0;
+}
+header>h3 {
+    top: 50px;
+    font-size: 0.9575rem;  /* 16 * 0.9575 = 15 */
+}
+/* MAIN */
+main {
+    text-align: center;
+    height: 100vh;
+}
+article {
+    margin: auto 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+article a {
+    color: white;
+}
+div {
+    height: auto;
+    padding-top: 2.5rem;
+}
+img {
+    box-shadow: 0 0  25px 0 rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-height: 75vh;
+}
+/* FOOTER */
+footer>section, nav {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+footer>section {
+    width: 60vw;
+    position: absolute;
+    bottom: 0;
+}
+nav {
+    position: fixed;
+    bottom: 0;    
+}
+em + h3 {
+    margin: 32px 0 18px;
+}
+nav {
+    right: 1em;
+    text-align: right;
+    font-weight: 400;
+}
+nav li {
+    line-height: 2;
+}
+ul {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 700px) {
+    .big-screen__hidden {
+        display: none;
+    }
+    header>h3 {
+        top: 16px;
+        right: 1em;
+        text-align: right;
+        font-size: 1.125rem; /* 16 * 1.125 = 18 */
+    }
+    img {
+        max-width: 600px;
+    }
+    footer>section {
+        position: fixed;
+        bottom: 0;
+    }
+}
